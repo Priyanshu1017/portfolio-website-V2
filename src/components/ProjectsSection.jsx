@@ -35,7 +35,7 @@ const ProjectsSection = () => {
   return (
     <section id="project" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center lg:block glowing-text">
           Featured <span className="text-primary">Projects</span>
         </h2>
 
@@ -44,7 +44,7 @@ const ProjectsSection = () => {
           crafted with attention to detail, performance, and user experience.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {projects.map((project, key) => (
             <div
               key={key}
@@ -58,7 +58,7 @@ const ProjectsSection = () => {
                 />
               </div>
 
-              <div className="p-6">
+              <div className="p-6 box-shadow">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, index) => (
                     <span
