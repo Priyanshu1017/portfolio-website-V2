@@ -17,7 +17,6 @@ import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
 
-
 const ContactSection = () => {
   const {toast}=useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -57,7 +56,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center lg:block glowing-text">
           Get In <span className="text-primary"> Touch</span>
         </h2>
 
@@ -114,7 +113,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="pt-8">
+            <div className="pt-8 ">
               <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
                 <a href="http://www.linkedin.com/in/priyanshu8839" target="_blank"><Linkedin /></a>
@@ -125,7 +124,7 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
+          <div className="bg-card p-8 rounded-lg shadow-xs box-shadow" onSubmit={handleSubmit}>
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
             <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>

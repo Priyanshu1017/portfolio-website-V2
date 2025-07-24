@@ -6,10 +6,10 @@ const Achievement = () => {
         {
             id: 1,
             title: "GATE CSE 2025",
-            description: "Qualified GATE 2025 in Computer Science & IT, demonstrating strong analytical and problem-solving skills. ",
+            description: "Qualified GATE 2025 in Computer Science & IT, demonstrating strong analytical and problem-solving skills. This achievement highlights my dedication and expertise in core computer science concepts.",
             image: "/projects/gate2025.jpeg",
             tags: [ "IIT Roorkee","GATE CSE"],
-            demoUrl: "/projects/gate_score.png",
+            demoUrl: "",
         },
         {
             id: 2,
@@ -22,7 +22,7 @@ const Achievement = () => {
         {
             id: 3,
             title: "Design and analysis of algorithm",
-            description: "Learned about different algorithm paradigms and efficient code practices.",
+            description: "Learned about different algorithm and learned to use them effectively. Strengthened my problem-solving abilities in the real-world scenarios.",
             image: "/projects/Design and analysis of algorithm.jpg",
             tags: ["SWAYAM/NPTEL", "DSA","Algorithm"],
             demoUrl: "https://priyanshu1017.github.io/portfolio-website/Design%20and%20analysis%20of%20algorithm.jpg",
@@ -32,7 +32,7 @@ const Achievement = () => {
     return (
         <section id="project" className="py-24 px-4 relative">
             <div className="container mx-auto max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center glowing-ball ">
                     Achievement a<span className="text-primary">nd Certificates</span>
                 </h2>
 
@@ -54,7 +54,7 @@ const Achievement = () => {
                                 />
                             </div>
 
-                            <div className="p-6">
+                            <div className="p-6 box-shadow">
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.tags.map((tag, index) => (
                                         <span

@@ -3,10 +3,8 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section
-      id="hero"
-      className="realtive min-h-screen flex flex-col items-center justify-center px-4"
-    >
+    <section id="hero" className="realtive min-h-screen flex flex-col items-center justify-center px-4 ">
+      <div class="hidden md:block glowing-ball absolute bottom-[12rem] lg:bottom-[7rem] -right-0.4 md:p-62 "></div>
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-1">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
@@ -23,7 +21,7 @@ const HeroSection = () => {
             {" "}
             Software Engineer with experience in Software, backend and frontend development, Skilled in
             Python, and React.js. Aiming to leverage software development skills, to develop innovative solutions
-            and continue learning and growing in the tech industry. 
+            and continue learning and growing in the tech industry.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
@@ -32,14 +30,14 @@ const HeroSection = () => {
             </a>
           </div>
 
-
         </div>
       </div>
-<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-<span className="text-sm text-muted-foreground mb-2">Scroll</span>
-<ArrowDown className="h-5 w-5 text-primary" />
 
-</div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+        <span className="text-sm text-muted-foreground mb-2">Scroll</span>
+        <ArrowDown className="h-5 w-5 text-primary" />
+
+      </div>
 
     </section>
   );
