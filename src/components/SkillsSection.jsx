@@ -33,7 +33,18 @@ const skills = [
 const categories = ["all", "Programming Languages", "frontend", "backend","Databases", "tools"];
 
 const SkillsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("");
+  const [showSkills, setShowSkills] = useState(false);
+
+  const handleCategoryClick = (category) => {
+    if (activeCategory === category && showSkills) {
+      setShowSkills(false);
+      setActiveCategory("");
+    } else {
+      setActiveCategory(category);
+      setShowSkills(true);
+    }
+  };
 
   const filteredSkills = skills.filter(
     (skill) => activeCategory === "all" || skill.category === activeCategory
@@ -50,11 +61,11 @@ const SkillsSection = () => {
           {categories.map((category, key) => (
             <button
               key={key}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => handleCategoryClick(category)}
               className={cn(
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
-                activeCategory === category
-                  ? "bg-primary text-primary-foreground"
+                activeCategory === category && showSkills
+                  ? "bg-primary text-primary-foreground" 
                   : "bg-secondary/70 text-foreground hover:bg-secondary"
               )}
             >
@@ -62,31 +73,39 @@ const SkillsSection = () => {
             </button>
           ))}
         </div>
+        <br /><br />
+        {!showSkills && (
+          <div className=" glowing-text">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSkills.map((skill, key) => (
-            <div
-              key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
-            >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg">{skill.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: `${skill.level}%` }}
-                />
-              </div>
+          <p>Click on the categories to view them</p>
+          </div>
+        )}
+        {showSkills && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredSkills.map((skill, key) => (
+              <div
+                key={key}
+                className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              >
+                <div className="text-left mb-4">
+                  <h3 className="font-semibold text-lg">{skill.name}</h3>
+                </div>
+                <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
+                  <div
+                    className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
+                    style={{ width: `${skill.level}%` }}
+                  />
+                </div>
 
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
+                <div className="text-right mt-1">
+                  <span className="text-sm text-muted-foreground">
+                    {skill.level}%
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

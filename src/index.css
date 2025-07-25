@@ -162,14 +162,17 @@
 }
 
 .glowing-ball {
-  background: radial-gradient(circle, #f1eaea75 0, #003855b0 20%, transparent 60%);
+  background: radial-gradient(circle, #00000075 0, #5a5f6b80 50%, transparent 70%);
   background-color: transparent;
 }
 .glowing-text {
-  background: radial-gradient(circle, #f1eaea75 0, #003855b0 30%, transparent 40%);
+  background: radial-gradient(circle, #00000075 0, #003855b0 30%, transparent 40%);
   background-color: transparent;
 }
 
 .box-shadow {
   box-shadow:inset 0px -1px 27px 0px rgba(175, 72, 199, 0.85);
+}
+.box-shadow-out {
+  box-shadow: 0px -1px 27px 0px rgba(175, 72, 199, 0.85);
 }
