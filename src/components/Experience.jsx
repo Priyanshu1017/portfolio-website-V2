@@ -29,18 +29,18 @@ const Experience = () => {
                             
                             </div>
                             <div className="grid grid-cols-1 gap-6">
-                                <div className="gradient-border p-6 card-hover">
+                            <div className="gradient-border p-6 card-hover container-bg ">
                                     <div className="flex items-start gap-4">
                                         <div className="p-3 rounded-full bg-primary/10">
                                             <Code className="h-6 w-6 text-primary" />
                                         </div>
-                                        <div className="text-left">
+                                    <div className="text-left" style={{ marginLeft: "1.6rem" }}>
                                             <h4 className="font-semibold text-lg ">My work at CRUV</h4>
                                         
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gradient-border p-6 card-hover">
+                                <div className="gradient-border p-6 card-hover container-bg ">
                                     <div className="flex items-start gap-4">
                                         <div className="text-left">
                                             <p className="text-muted-foreground ">
@@ -49,7 +49,7 @@ const Experience = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gradient-border p-6 card-hover">
+                                <div className="gradient-border p-6 card-hover container-bg ">
                                     <div className="flex items-start gap-4">
                                         <div className="text-left">
                                             <p className="text-muted-foreground">
@@ -58,7 +58,7 @@ const Experience = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gradient-border p-6 card-hover">
+                                <div className="gradient-border p-6 card-hover container-bg ">
                                     <div className="flex items-start gap-4">
                                         <div className="text-left">
                                             <p className="text-muted-foreground">
@@ -67,7 +67,7 @@ const Experience = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="gradient-border p-6 card-hover">
+                                <div className="gradient-border p-6 card-hover container-bg ">
                                     <div className="flex items-start gap-4">
                                         <div className="text-left">
                                             <p className="text-muted-foreground">

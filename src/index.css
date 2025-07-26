@@ -60,6 +60,14 @@
       opacity: 0;
     }
   }
+  @keyframes glowing-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 @layer base {
@@ -128,7 +136,10 @@
 }
 
 @utility card-hover {
-  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+  @apply transition-transform duration-300 hover:scale-[1.02];
+}
+.card-hover:hover {
+  box-shadow: 0 0 24px 0px rgba(34, 197, 162, 0.7); /* green shadow on hover */
 }
 
 @utility gradient-border {
@@ -162,8 +173,9 @@
 }
 
 .glowing-ball {
-  background: radial-gradient(circle, #00000075 0, #5a5f6b80 50%, transparent 70%);
+  background: radial-gradient(circle, #00000075 0, #5a5f6b80 30%, transparent 50%);
   background-color: transparent;
+  /* animation: glowing-rotate 8s linear infinite; */
 }
 .glowing-text {
   background: radial-gradient(circle, #00000075 0, #003855b0 30%, transparent 40%);
@@ -171,8 +183,20 @@
 }
 
 .box-shadow {
-  box-shadow:inset 0px -1px 27px 0px rgba(175, 72, 199, 0.85);
+  box-shadow: inset 0px -9px 20px 0px rgb(89 201 98 / 34%);
+}
+.card-hover:hover .box-shadow {
+  box-shadow: none !important;
 }
 .box-shadow-out {
   box-shadow: 0px -1px 27px 0px rgba(175, 72, 199, 0.85);
 }
+.container-bg {
+  
+    background-image: url(/projects/space3.jpg) ;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 20px 0px 17px 0px rgb(64 63 85 / 57%);
+
+}
+

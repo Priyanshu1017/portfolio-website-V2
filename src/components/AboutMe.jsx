@@ -34,8 +34,8 @@ const AboutMe = () => {
                   {""} Get in Touch
                 </a>
                 <a
-                   href="/Luv-Yadav.pdf"
-                   download="Luv-Yadav"
+                   href="Priyanshu_Pathak_Resume.pdf"
+                   download="Priyanshu_Pathak_Resume"
                   className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
                 >
                   Download CV
@@ -43,8 +43,8 @@ const AboutMe = () => {
               </div>
             </div>
             <div className="grid grid-cols-1 gap-6">
-              <div className="gradient-border p-6 card-hover">
-                <div className="flex items-start gap-4">
+              <div className="gradient-border p-6 card-hover  container-bg">
+                <div className="flex items-start gap-4 ">
                   <div className="p-3 rounded-full bg-primary/10">
                     <Code className="h-6 w-6 text-primary" />
                   </div>
@@ -57,7 +57,7 @@ const AboutMe = () => {
                   </div>
                 </div>
               </div>
-              <div className="gradient-border p-6 card-hover">
+              <div className="gradient-border p-6 card-hover  container-bg">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-full bg-primary/10">
                     <User className="h-6 w-6 text-primary" />
@@ -71,7 +71,7 @@ const AboutMe = () => {
                   </div>
                 </div>
               </div>
-              <div className="gradient-border p-6 card-hover">
+              <div className="gradient-border p-6 card-hover  container-bg">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-full bg-primary/10">
                     <Briefcase className="h-6 w-6 text-primary" />
