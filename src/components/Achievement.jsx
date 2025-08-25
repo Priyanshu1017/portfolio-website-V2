@@ -9,7 +9,7 @@ const Achievement = () => {
             description: "Qualified GATE 2025 in Computer Science & IT, demonstrating strong analytical and problem-solving skills. This achievement highlights my dedication and expertise in core computer science concepts.",
             image: "/projects/gate2025.jpeg",
             tags: [ "IIT Roorkee","GATE CSE"],
-            demoUrl: "",
+            // demoUrl: "",
         },
         {
             id: 2,
